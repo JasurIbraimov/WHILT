@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-inter);
+}
+
+.main {
+    padding: 10px;
+    padding-top: 50px;
+    background-color: #f5f6fa;
+    min-height: 100vh;
+}
+
+.head_text {
+    @apply mt-5 text-3xl font-extrabold leading-[1.15] text-black sm:text-4xl;
+}
+.purple_gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-900;
+}
+.desc {
+    @apply text-black text-xs mt-5 font-light;
+}
+.menu {
+    @apply flex justify-between w-full p-2 bg-slate-950 fixed text-white;
+}
+
+.light_btn {
+    font-size: 10px;
+    @apply rounded-full bg-gradient-to-r from-purple-500 to-purple-900  py-1 px-2 font-bold hover:from-purple-900 hover:to-purple-500 transition duration-300 ease-in-out;
+}
