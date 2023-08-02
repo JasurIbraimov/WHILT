@@ -29,7 +29,17 @@
     @apply flex justify-between w-full p-2 bg-slate-950 fixed text-white;
 }
 
-.light_btn {
+.btn {
     font-size: 10px;
-    @apply rounded-full bg-gradient-to-r from-purple-500 to-purple-900  py-1 px-2 font-bold hover:from-purple-900 hover:to-purple-500 transition duration-300 ease-in-out;
+    @apply rounded-full text-center bg-purple-600 border border-transparent px-2 py-1 hover:bg-transparent hover:border-white transition duration-300;
+}
+.btn_reversed {
+    font-size: 10px;
+    @apply rounded-full text-center bg-white border text-black border-white px-2 py-1 hover:bg-purple-900 hover:border-transparent transition duration-300 hover:text-white;
+}
+
+.mobile-menu {
+    width: 120px;
+    left: -400%;
+    @apply absolute rounded flex flex-col bg-slate-800  p-2
 }
