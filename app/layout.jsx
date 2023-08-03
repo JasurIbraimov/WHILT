@@ -15,10 +15,10 @@ const RootLayout = ({ children }) => {
     return (
         <html lang="en" className={inter.variable}>
             <body>
-                <Nav />
-                <main className="main">
-                    {children}
-                </main>
+                <Provider>
+                    <Nav />
+                    <main className="main">{children}</main>
+                </Provider>
             </body>
         </html>
     );

@@ -78,13 +78,27 @@ const Nav = () => {
                         </button>
                         {toggleDropdown && (
                             <div className="mobile-menu">
-                                <Link href={"/profile"} className="btn">
+                                <Link
+                                    href={"/profile"}
+                                    className="btn"
+                                    onClick={() => setToggleDropdown(false)}
+                                >
                                     My Profile
                                 </Link>
-                                <Link href={"/create"} className="btn mt-2">
+                                <Link
+                                    href={"/create"}
+                                    className="btn mt-2"
+                                    onClick={() => setToggleDropdown(false)}
+                                >
                                     Create Post
                                 </Link>
-                                <button className="btn_reversed mt-2">
+                                <button
+                                    className="btn_reversed mt-2"
+                                    onClick={() => {
+                                        setToggleDropdown(false);
+                                        signOut();
+                                    }}
+                                >
                                     Sign out
                                 </button>
                             </div>
