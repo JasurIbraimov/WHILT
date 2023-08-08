@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 const Nav = () => {
-    const {data: session}=useSession()
+    const { data: session } = useSession();
     const [providers, setProviders] = useState(null);
     const [toggleDropdown, setToggleDropdown] = useState(false);
     useEffect(() => {
@@ -23,8 +23,8 @@ const Nav = () => {
                 <Image
                     alt="WHILT Logo"
                     src="/assets/images/logo-light.svg"
-                    width={30}
-                    height={30}
+                    width={40}
+                    height={40}
                 />
             </Link>
 
@@ -35,13 +35,14 @@ const Nav = () => {
                         <Link href={"/create"} className="btn">
                             Create Post
                         </Link>
-                        <button className="btn_reversed">Sign out</button>
+                        <button className="btn_alt" onClick={signOut}>Sign out</button>
                         <Link href={"/profile"} className="rounded-full">
                             <Image
                                 alt="User Profile"
-                                width={30}
-                                height={30}
-                                src={"/assets/images/logo.svg"}
+                                width={40}
+                                height={40}
+                                src={session?.user.image}
+                                className='rounded-full'
                             />
                         </Link>
                     </div>
@@ -53,7 +54,7 @@ const Nav = () => {
                                     type="button"
                                     key={provider.name}
                                     onClick={() => signIn(provider.id)}
-                                    className="btn"
+                                    className="btn_alt"
                                 >
                                     Sign In
                                 </button>
@@ -71,9 +72,10 @@ const Nav = () => {
                         >
                             <Image
                                 alt="User Profile"
-                                width={30}
-                                height={30}
-                                src={"/assets/images/logo.svg"}
+                                width={40}
+                                height={40}
+                                src={session?.user.image}
+                                className='rounded-full'
                             />
                         </button>
                         {toggleDropdown && (
@@ -93,7 +95,7 @@ const Nav = () => {
                                     Create Post
                                 </Link>
                                 <button
-                                    className="btn_reversed mt-2"
+                                    className="btn_alt mt-2"
                                     onClick={() => {
                                         setToggleDropdown(false);
                                         signOut();

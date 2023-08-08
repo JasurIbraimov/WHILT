@@ -8,38 +8,68 @@
     box-sizing: border-box;
     font-family: var(--font-inter);
 }
-
+body  {
+    background-color: #f5f6fa;
+}
 .main {
     padding: 10px;
     padding-top: 50px;
-    background-color: #f5f6fa;
     min-height: 100vh;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .head_text {
-    @apply mt-5 text-3xl font-extrabold leading-[1.15] text-black sm:text-4xl;
+    @apply mt-10 text-3xl font-extrabold text-black sm:text-4xl;
 }
+
 .purple_gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-900;
 }
 .desc {
-    @apply text-black text-xs mt-5 font-light;
+    @apply text-black text-base mt-5 font-light;
 }
 .menu {
-    @apply flex justify-between w-full p-2 bg-slate-950 fixed text-white;
+    @apply flex justify-between w-full p-2 bg-slate-950 fixed text-white items-center;
 }
-
+button {
+    @apply cursor-pointer outline-none
+}
+button:disabled {
+    @apply bg-slate-400 
+}
+button:disabled:hover {
+    @apply bg-slate-400
+}
 .btn {
-    font-size: 10px;
-    @apply rounded-full text-center bg-purple-600 border border-transparent px-2 py-1 hover:bg-transparent hover:border-white transition duration-300;
+    @apply rounded-full text-base w-max text-center text-white bg-purple-600  px-3 py-2 hover:bg-purple-900  transition duration-300 flex justify-center items-center;
 }
-.btn_reversed {
-    font-size: 10px;
-    @apply rounded-full text-center bg-white border text-black border-white px-2 py-1 hover:bg-purple-900 hover:border-transparent transition duration-300 hover:text-white;
+.btn_alt {
+    @apply rounded-full text-base w-max text-center text-purple-500 bg-transparent border-purple-900 border  px-3 py-2 hover:bg-purple-900  hover:text-white transition duration-300 flex justify-center items-center;
+}
+.btn_danger {
+    @apply rounded-full text-base w-max text-center text-red-500 bg-transparent border-red-500 border  px-3 py-2 hover:bg-red-600  hover:text-white transition duration-300 flex justify-center items-center;
+}
+.mobile-menu {
+    width: 200px;
+    right: 60px;
+    top: 20px;
+    @apply fixed rounded flex flex-col bg-slate-800  py-5 px-4 items-center
 }
 
-.mobile-menu {
-    width: 120px;
-    left: -400%;
-    @apply absolute rounded flex flex-col bg-slate-800  p-2
+.form_label {
+    @apply text-gray-800 block text-base mt-6 font-semibold mb-3 
+}
+.form_input {
+    @apply rounded w-full font-light text-base resize-none outline-none p-3 shadow-sm
+}
+.form_textarea {
+    height: 100px;
+    @apply rounded w-full font-light text-base resize-none outline-none p-3 shadow-sm
+}
+.post_card {
+    @apply shadow bg-gray-200 rounded mt-4 p-5 relative
+}
+.tag {
+    @apply rounded-full bg-gradient-to-r from-purple-500 to-purple-900 text-sm w-max px-2 py-1 text-white mx-1
 }
