@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const Form = ({ type, handleChangeTag, handleChangePost, submitting, handleSubmit }) => {
+const Form = ({ type, handleChangeTag, handleChangePost, submitting, handleSubmit, tag, post }) => {
     return (
         <form
             onSubmit={handleSubmit}
@@ -16,6 +16,7 @@ const Form = ({ type, handleChangeTag, handleChangePost, submitting, handleSubmi
             </label>
             <textarea
                 onChange={handleChangePost}
+                defaultValue={post}
                 name="post"
                 id="post"
                 className="form_textarea"
@@ -29,6 +30,7 @@ const Form = ({ type, handleChangeTag, handleChangePost, submitting, handleSubmi
                 name="tag"
                 id="tag"
                 className="form_input"
+                defaultValue={tag}
                 placeholder="#tag"
                 onChange={handleChangeTag}
             />

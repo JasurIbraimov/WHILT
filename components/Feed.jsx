@@ -42,7 +42,7 @@ const Feed = () => {
       </form>
 
       <PostCardList data={posts} handleTagClick={() => {}}>
-
+      
       </PostCardList>
     </section>
   )

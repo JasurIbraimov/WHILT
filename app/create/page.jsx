@@ -53,7 +53,7 @@ const CreatePost = () => {
         handleChangePost={changePost}
         handleChangeTag={changeTag}
         submitting={submitting}
-        handleSubmit={createPost}
+        handleSubmit={(e) => createPost(e)}
     />
   )
 }

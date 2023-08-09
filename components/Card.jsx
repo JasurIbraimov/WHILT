@@ -12,6 +12,8 @@ const Card = ({
     handleDelete,
 }) => {
     const [copied, setCopied] = useState("");
+    const { data: session } = useSession();
+    const pathName = usePathname();
     const handleCopy = () => {
         setCopied(post);
         navigator.clipboard.writeText(post);
@@ -50,6 +52,33 @@ const Card = ({
                         height={20}
                     />
                 </div>
+                {session?.user.id === creator._id &&
+                    pathName === "/profile" && (
+                        <>
+                            <div
+                                className="cursor-pointer ml-3"
+                                onClick={handleEdit}
+                            >
+                                <Image
+                                    alt="Edit"
+                                    src={"/assets/icons/edit.png"}
+                                    width={20}
+                                    height={20}
+                                />
+                            </div>
+                            <div
+                                className="cursor-pointer ml-3"
+                                onClick={handleDelete}
+                            >
+                                <Image
+                                    alt="Delete"
+                                    src={"/assets/icons/delete.png"}
+                                    width={20}
+                                    height={20}
+                                />
+                            </div>
+                        </>
+                    )}
             </div>
 
             <p className="my-4 text-base text-gray-700">{post}</p>
