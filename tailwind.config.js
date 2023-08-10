@@ -10,9 +10,6 @@ module.exports = {
       fontFamily: {
         roboto: "var(--font-roboto)",
         inter: "var(--font-inter)" 
-      },
-      colors: {
-        "primary-orange": "#FF5722"
       }
     },
   },

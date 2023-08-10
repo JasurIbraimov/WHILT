@@ -30,7 +30,7 @@ body  {
     @apply text-black text-base mt-5 font-light;
 }
 .menu {
-    @apply flex justify-between w-full p-2 bg-slate-950 fixed text-white items-center;
+    @apply flex justify-between w-full p-2 bg-slate-950 fixed text-white items-center z-10;
 }
 button {
     @apply cursor-pointer outline-none
@@ -61,15 +61,19 @@ button:disabled:hover {
     @apply text-gray-800 block text-base mt-6 font-semibold mb-3 
 }
 .form_input {
-    @apply rounded w-full font-light text-base resize-none outline-none p-3 shadow-sm
+    @apply rounded w-full font-light text-base resize-none outline-none p-3 shadow-sm pr-10
 }
 .form_textarea {
     height: 100px;
     @apply rounded w-full font-light text-base resize-none outline-none p-3 shadow-sm
 }
 .post_card {
-    @apply shadow bg-gray-200 rounded mt-4 p-5 relative
+    @apply shadow bg-gray-200 rounded p-5 relative
 }
 .tag {
     @apply rounded-full bg-gradient-to-r from-purple-500 to-purple-900 text-sm w-max px-2 py-1 text-white mx-1
+}
+
+.confirmation {
+    @apply absolute w-full h-full bg-slate-500 bg-opacity-90 rounded top-0 left-0 flex justify-center items-center flex-col
 }

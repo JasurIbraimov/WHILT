@@ -9,6 +9,11 @@ import Provider from "@components/Provider";
 export const metadata = {
     title: "WHILT",
     description: "What have I learned today?",
+    icons: {
+        icon: "/assets/icons/logo-light.ico",
+        shortcut: "/assets/icons/logo-light.ico",
+        apple: "/assets/icons/logo-light.ico",
+    },
 };
 
 const RootLayout = ({ children }) => {

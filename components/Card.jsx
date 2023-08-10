@@ -10,8 +10,10 @@ const Card = ({
     handleTagClick,
     handleEdit,
     handleDelete,
+    handleUserClick,
 }) => {
     const [copied, setCopied] = useState("");
+    const [confirmation, setConfirmation] = useState(false);
     const { data: session } = useSession();
     const pathName = usePathname();
     const handleCopy = () => {
@@ -24,7 +26,12 @@ const Card = ({
     return (
         <div className="post_card">
             <div className="flex justify-between items-start g-5">
-                <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
+                <div
+                    className="flex-1 flex justify-start items-center gap-3 cursor-pointer"
+                    onClick={() =>
+                        handleUserClick && handleUserClick(creator._id)
+                    }
+                >
                     <Image
                         src={creator.image}
                         alt="User image"
@@ -68,7 +75,7 @@ const Card = ({
                             </div>
                             <div
                                 className="cursor-pointer ml-3"
-                                onClick={handleDelete}
+                                onClick={() => setConfirmation(true)}
                             >
                                 <Image
                                     alt="Delete"
@@ -83,11 +90,23 @@ const Card = ({
 
             <p className="my-4 text-base text-gray-700">{post}</p>
             <p
-                className="tag"
+                className="tag cursor-pointer"
                 onClick={() => handleTagClick && handleTagClick(tag)}
             >
                 {tag}
             </p>
+
+            {confirmation && (
+                <div className="confirmation">
+                    <h1 className="font-bold text-xl text-center">
+                        Are you sure to delete this post?
+                    </h1>
+                    <div className="flex mt-2">
+                        <button className="btn mr-2" onClick={handleDelete}>Yes</button>
+                        <button className="btn_danger" onClick={() => setConfirmation(false)}>No</button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

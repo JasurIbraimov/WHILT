@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Form = ({ type, handleChangeTag, handleChangePost, submitting, handleSubmit, tag, post }) => {
+    const router = useRouter()
     return (
         <form
             onSubmit={handleSubmit}
@@ -46,9 +48,9 @@ const Form = ({ type, handleChangeTag, handleChangePost, submitting, handleSubmi
                     )}
                 </button>
 
-                <Link className="btn_danger" href="/">
+                <button className="btn_danger" type="button" onClick={() => router.back()}>
                     Cancel
-                </Link>
+                </button>
             </div>
         </form>
     );
