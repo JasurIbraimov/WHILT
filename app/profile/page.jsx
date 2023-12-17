@@ -37,6 +37,8 @@ const ProfilePage = () => {
         };
         if (session?.user.id) {
             fetchPosts();
+        }  else {
+            router.push('/')
         }
     }, [session]);
 
