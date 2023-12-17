@@ -4,7 +4,7 @@ import Form from '@components/Form'
 // Hooks
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 
 const CreatePost = () => {
@@ -15,7 +15,11 @@ const CreatePost = () => {
         post: "",
         tag: ""
     })
-
+    useEffect(() => {
+        if(!session?.user) {
+            return router.push("/")
+        }
+    })
     const createPost = async (e) => {
         e.preventDefault()
         setSubmitting(true)

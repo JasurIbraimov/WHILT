@@ -4,12 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
-
 const Nav = () => {
     const { data: session } = useSession();
     const [providers, setProviders] = useState(null);
     const [toggleDropdown, setToggleDropdown] = useState(false);
-
+    const handleSignOut = () => {
+        setToggleDropdown(false);
+        signOut();
+    }
+    
     useEffect(() => {
         const fetchProviders = async () => {
             const providers = await getProviders();
@@ -36,7 +39,7 @@ const Nav = () => {
                         <Link href={"/create"} className="btn">
                             Create Post
                         </Link>
-                        <button className="btn_alt" onClick={signOut}>Sign out</button>
+                        <button className="btn_alt" onClick={handleSignOut}>Sign out</button>
                         <Link href={"/profile"} className="rounded-full">
                             <Image
                                 alt="User Profile"
@@ -97,10 +100,7 @@ const Nav = () => {
                                 </Link>
                                 <button
                                     className="btn_alt mt-2"
-                                    onClick={() => {
-                                        setToggleDropdown(false);
-                                        signOut();
-                                    }}
+                                    onClick={handleSignOut}
                                 >
                                     Sign out
                                 </button>
