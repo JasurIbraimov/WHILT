@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# What have I learned for today? (WHILT)
+
+## Description
+
+"What have I learned for today?" (WHILT) is a collaborative knowledge-sharing platform where individuals can contribute and share their insights with a wider audience. Whether it's a new skill, a valuable lesson, or a useful piece of information, WHILT provides a space for users to create accounts and post their learnings in the form of "WHILTs" (What Have I Learned Today).
 
 ## Getting Started
 
-First, run the development server:
+To get started with WHILT, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. Clone the repository: `git clone [repository_url]`
+2. Install dependencies: `npm install`
+3. Run the application: `npm start`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technical Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+WHILT is built using the following technologies:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Next.js](https://nextjs.org/): A React framework for building web applications.
+- [React](https://reactjs.org/): A JavaScript library for building user interfaces.
+- [MongoDB](https://www.mongodb.com/): A NoSQL database for storing and retrieving data.
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework for designing responsive and efficient layouts.
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+If you would like to contribute to WHILT, please follow these guidelines:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/new-feature`
+3. Make your changes and commit them: `git commit -m 'Add new feature'`
+4. Push to the branch: `git push origin feature/new-feature`
+5. Create a pull request.
