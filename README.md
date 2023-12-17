@@ -1,3 +1,6 @@
+<img width="1280" alt="Main page" src="https://github.com/JasurIbraimov/WHILT/assets/64384124/3f605458-a076-4d51-bf31-526faf26f2db">
+<img width="1278" alt="Profile page" src="https://github.com/JasurIbraimov/WHILT/assets/64384124/16adbcae-b0d6-44b5-b5d1-3e78d87b9733">
+<img width="1280" alt="Create post" src="https://github.com/JasurIbraimov/WHILT/assets/64384124/1d69396a-7737-44c9-af3b-dddd5f48a3b1">
 # What have I learned for today? (WHILT)
 
 ## Description
